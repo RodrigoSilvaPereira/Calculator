@@ -86,7 +86,7 @@ A estrutura do projeto foi pensada para escalabilidade e manutenibilidade:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/CalculatorCompose.git
+   git clone https://github.com/RodrigoSilvaPereira/Calculator.git
    ```
 
 2. Abra com o **Android Studio** (Hedgehog ou superior)
