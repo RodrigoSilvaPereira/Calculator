@@ -22,8 +22,6 @@ A interface da aplicação segue o layout apresentado abaixo, com foco em clarez
 - Botão de **Calcular**
 - Exibição do **resultado**
 
-*(Imagem de referência incluída no projeto)*
-
 ---
 
 ## 🧱 Arquitetura
@@ -58,7 +56,6 @@ A estrutura do projeto foi pensada para escalabilidade e manutenibilidade:
 - ✅ **State Management** com `remember`, `mutableStateOf`
 - ✅ **Material Design 3**
 - ✅ Componentização e reutilização de código
-- 🔜 (Planejado) **Testes Unitários com JUnit e Compose Test**
 
 ---
 
