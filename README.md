@@ -92,6 +92,24 @@ A estrutura do projeto foi pensada para escalabilidade e manutenibilidade:
 
 ---
 
+## ⚠️ Problema Encontrado: Versão do Android Gradle Plugin
+Durante o desenvolvimento, ocorreu um problema de compatibilidade com a versão do Android Gradle Plugin (AGP). A mensagem de erro indicava:
+```
+The project is using an incompatible version of the Android Gradle plugin. Please upgrade to AGP 8.0 or higher.
+```
+
+Foi necessário atualizar a versão do AGP para uma versão compatível com o projeto no arquivo build.gradle (nível de projeto) e também ajustar a versão do Gradle caso necessário. Após isso, a sincronização do projeto voltou a funcionar normalmente.
+
+### Substitua:
+```
+agp = "8.9.0"
+```
+
+### Por:
+```
+agp = "8.7.2"
+```
+
 ## 🧑‍💻 Autor
 
 Desenvolvido por Rodrigo, estudante de desenvolvimento mobile com foco em Kotlin e Jetpack Compose.  
