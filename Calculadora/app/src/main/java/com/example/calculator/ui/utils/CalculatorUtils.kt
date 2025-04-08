@@ -5,26 +5,32 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 
 object CalculatorUtils {
+    // Criando constantes para não ficar repetindo String
     private const val INVALID_INPUT = "Entrada inválida"
     private const val DIVISION_BY_ZERO = "Divisão por zero"
     private const val INVALID_OPERATION = "Operação inválida"
 
     fun calculate(number1: String?, number2: String?, operator: String?): String {
+        // Criando lógica para formatação numérica e aceitar "." e ","
         val cleanedNumber1 = number1?.trim()?.replace(",", ".")
         val cleanedNumber2 = number2?.trim()?.replace(",", ".")
         val op = operator?.trim()
 
+        // Lógica para não ir vazio
         if (cleanedNumber1.isNullOrEmpty() || cleanedNumber2.isNullOrEmpty()) {
             return INVALID_INPUT
         }
 
+        // Conversão para BigDecimal (melhor que double ou float)
         val n1 = cleanedNumber1.toBigDecimalOrNull()
         val n2 = cleanedNumber2.toBigDecimalOrNull()
 
+        // Verificação pós conversão
         if (n1 == null || n2 == null) {
             return INVALID_INPUT
         }
 
+        // Lógica baseado na escolhar de operadores
         return when (op) {
             "+" -> (n1 + n2).formatResult()
             "-" -> (n1 - n2).formatResult()

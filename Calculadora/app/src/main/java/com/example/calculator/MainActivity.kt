@@ -19,6 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CalculatorTheme {
+                // Chamando a tela principal
                 CalculatorScreen()
             }
         }
